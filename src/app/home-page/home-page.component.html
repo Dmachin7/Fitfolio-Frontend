@@ -1,0 +1,9 @@
+<div class="workouts">
+    <div *ngFor="let work of workouts" class="workout">
+        <img src="{{work.gifUrl}}">
+        <div class="workout-text">
+            <h1 class="workout-name"> {{work.name}}</h1>
+            <p class="workout-target">Muscle Targeted: {{work.target}}</p>
+        </div>
+    </div>
+</div>
