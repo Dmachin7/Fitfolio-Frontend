@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/enviorments/enviorment';
 
 @Component({
   selector: 'app-home-page',
@@ -12,10 +13,11 @@ export class HomePageComponent implements OnInit{
 
 workouts:any=[];
 
+
   ngOnInit(){
     // this.http.get('https://exercisedb.p.rapidapi.com/exercises?limit=1', {
     //   headers: new HttpHeaders({
-    //     'X-RapidAPI-Key': '1f65bfcc53mshe628dd3ca1bfac4p1763d3jsn41b07dec96eb',
+    //     'X-RapidAPI-Key': environment.apiUrl ,
 		//     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
     //   })
     // }).subscribe(result => {
