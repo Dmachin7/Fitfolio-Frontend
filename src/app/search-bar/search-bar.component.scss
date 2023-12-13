@@ -1,5 +1,6 @@
 * {
     color: white;
+    -webkit-appearance: none !important;
 }
 
 .search-bar-container {
@@ -20,4 +21,6 @@
 .search-button {
     padding: .5rem;
     color: black;
+    -webkit-appearance: none !important;
+
 }
