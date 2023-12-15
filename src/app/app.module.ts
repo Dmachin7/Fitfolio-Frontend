@@ -10,6 +10,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
 import { WorkoutPageComponent } from './workout-page/workout-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MyWorkoutsComponent } from './my-workouts/my-workouts.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,15 @@ import { WorkoutPageComponent } from './workout-page/workout-page.component';
     HomePageComponent,
     LoginPageComponent,
     RegisterPageComponent,
-    WorkoutPageComponent
+    WorkoutPageComponent,
+    MyWorkoutsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
