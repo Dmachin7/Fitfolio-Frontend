@@ -1,7 +1,7 @@
 .container {
-    outline: 2px solid white;
+    // outline: 2px solid white;
     width: 80vw;
-    height: 50%;
+    height: 60%;
     position: absolute;
     top: 20%;
     left: 50%;
@@ -19,9 +19,9 @@
 
 .image-container img {
     border-radius: 10px;
-    object-fit: cover;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .info-container span {
@@ -35,11 +35,12 @@
     flex-direction: column;
     margin-left: 10px;
     margin-bottom: 10px;
+    height: 100%;
+    width: 100%;
 }
 
 .info-container p {
 margin: 0;
-margin-right: 300px;
 justify-content: left;
 font-size: 20px;
 }
@@ -50,6 +51,7 @@ font-size: 20px;
 
 .info-container h4 {
    border-bottom: 1px solid white;
+   font-size: 25px;
 }
 
 .info-container h1 {
@@ -73,4 +75,18 @@ svg{
     height: 50px;
     border-radius: 10px;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(324deg) brightness(107%) contrast(101%);
+}
+
+@media screen and (max-width: 500px) {
+.container {
+    top: 30%;
+    flex-direction: column;
+}
+.info-container h1, h2, h3, h4 {
+    margin: 5px;
+}
+.info-container p {
+    margin: 5px;
+    }
+
 }

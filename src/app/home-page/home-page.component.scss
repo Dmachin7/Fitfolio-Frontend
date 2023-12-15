@@ -74,6 +74,9 @@ body {
 
 @media screen and (max-width: 500px) {
 
+    .title {
+        font-size: 20px;
+    }
     .workout {
         display: flex;
         justify-content: flex-start;

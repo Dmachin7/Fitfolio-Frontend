@@ -39,7 +39,7 @@ body {
 
 /* NAVBAR STYLING */
 .navbar {
-    // background: linear-gradient(to right,rgb(52, 211, 153),rgb(110, 231, 183), rgba(255, 255, 255, .8)); 
+    background: linear-gradient(to bottom,rgb(0, 0, 0), rgba(0, 0, 0, 0)); 
     display: flex;
     width: 100%;
     position: fixed;
@@ -47,6 +47,7 @@ body {
     align-items: center;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 
