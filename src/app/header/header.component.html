@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="header-title">
-        <h1>FitFolio</h1>
+        <h1 routerLink="/">FitFolio</h1>
     </div>
     <div class="toggle-button" (click)="lockScroll()" (click)="showNav()">
         <span class="bar"></span>
@@ -10,7 +10,7 @@
     <div class="navbar-links">
         <ul>
         <li><a *ngIf="checkIfLoggedIn() === true"  (click)="lockScroll()" href="#">My Workouts</a></li>
-        <li><a *ngIf="checkIfLoggedIn() === false" (click)="lockScroll()" href="#">Login/Register</a></li>
+        <li><a routerLink="/login" *ngIf="checkIfLoggedIn() === false" (click)="lockScroll()" href="#">Login/Register</a></li>
         </ul>
         
     </div>
