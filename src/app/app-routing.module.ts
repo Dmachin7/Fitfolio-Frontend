@@ -3,8 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { WorkoutPageComponent } from './workout-page/workout-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
-const routes: Routes = [{path: '', component: HomePageComponent},{path: 'workout', component: WorkoutPageComponent}, {path: 'login', component: LoginPageComponent}];
+const routes: Routes = [{path: '', component: HomePageComponent},{path: 'workout', component: WorkoutPageComponent}, {path: 'login', component: LoginPageComponent}, {path: 'register', component: RegisterPageComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
