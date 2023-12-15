@@ -9,8 +9,8 @@
     </div>
     <div class="navbar-links">
         <ul>
-        <li><a (click)="lockScroll()" href="#">My Workouts</a></li>
-        <li><a (click)="lockScroll()" href="#">Login/Register</a></li>
+        <li><a *ngIf="checkIfLoggedIn() === true"  (click)="lockScroll()" href="#">My Workouts</a></li>
+        <li><a *ngIf="checkIfLoggedIn() === false" (click)="lockScroll()" href="#">Login/Register</a></li>
         </ul>
         
     </div>

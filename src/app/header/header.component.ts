@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit{
 
+  private loggedIn = true
+
   lockScroll = () => {
     if(window.innerWidth < 500) {
       document.body.classList.toggle('lock-scroll')
@@ -17,6 +19,15 @@ export class HeaderComponent implements OnInit{
     console.log("it works")
   }
 
-  ngOnInit(): void {
+  checkIfLoggedIn = () => {
+    if (this.loggedIn === true) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  ngOnInit(){
+    this.checkIfLoggedIn()
   }
 }

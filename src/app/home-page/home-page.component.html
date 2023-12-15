@@ -1,5 +1,9 @@
+<app-search-bar></app-search-bar>
 <div class="workouts">
-    <div *ngFor="let work of workouts" class="workout">
+    <div class="title-content">
+        <h1 class="title">Featured Workouts</h1>
+    </div>
+    <div routerLink='/workout' *ngFor="let work of workouts" class="workout">
         <img src="{{work.gifUrl}}">
         <div class="workout-text">
             <h1 class="workout-name"> {{work.name}}</h1>
