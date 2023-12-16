@@ -3,6 +3,21 @@ body {
     color: white;
 }
 
+svg{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(324deg) brightness(107%) contrast(101%);
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+svg:hover {
+    filter: invert(31%) sepia(92%) saturate(7414%) hue-rotate(356deg) brightness(108%) contrast(120%);
+}
+
 .not-auth {
     display: flex;
     justify-content: center;
