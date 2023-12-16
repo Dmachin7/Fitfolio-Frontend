@@ -34,7 +34,7 @@ export class MyWorkoutsComponent implements OnInit {
     })
     
     this.data.currentMessage.subscribe(info => this.info = info)
-      this.http.get('http://localhost:3000/workouts/', { 
+      this.http.get('https://fit-folio-15bacc8dfac7.herokuapp.com/workouts/', { 
         params: {
           username: this.info
         }
@@ -43,7 +43,7 @@ export class MyWorkoutsComponent implements OnInit {
           this.workouts = res
         }
       )
-      this.http.get('http://localhost:3000/user/auth', {
+      this.http.get('https://fit-folio-15bacc8dfac7.herokuapp.com/user/auth', {
         withCredentials: true
       }).subscribe(res => {
         console.log("authorized")
