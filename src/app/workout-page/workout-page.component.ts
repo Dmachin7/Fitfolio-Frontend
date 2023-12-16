@@ -10,7 +10,7 @@ export class WorkoutPageComponent {
     {
       "bodyPart": "waist",
       "equipment": "body weight",
-      "gifUrl": "https://v2.exercisedb.io/image/ak0doyBeXm1uVy",
+      "gifUrl": "https://v2.exercisedb.io/image/6XnWVjY-yBB419",
       "id": "0001",
       "name": "3/4 sit-up",
       "target": "abs",
