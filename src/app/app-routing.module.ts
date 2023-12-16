@@ -4,8 +4,10 @@ import { WorkoutPageComponent } from './workout-page/workout-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegisterPageComponent } from './register-page/register-page.component';
+import { MyWorkoutsComponent } from './my-workouts/my-workouts.component';
 
-const routes: Routes = [{path: '', component: HomePageComponent},{path: 'workout', component: WorkoutPageComponent}, {path: 'login', component: LoginPageComponent}, {path: 'register', component: RegisterPageComponent}];
+const routes: Routes = [{path: '', component: HomePageComponent},{path: 'workout', component: WorkoutPageComponent}, {path: 'login', component: LoginPageComponent}, {path: 'register', component: RegisterPageComponent}, {path: 'myworkouts', component: MyWorkoutsComponent
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

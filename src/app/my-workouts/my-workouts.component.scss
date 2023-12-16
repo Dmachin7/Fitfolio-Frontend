@@ -1,0 +1,132 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.title-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.workouts {
+    width: 60vw;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    display: flex;  
+    flex-direction: column;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.workouts img {
+    width: 20vw;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.workout {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    transition: outline 200ms ease-in-out;
+}
+
+
+.workout-text {
+    padding: .5rem;
+}
+
+.workout h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.workout p {
+    margin: 0;
+    font-size: 20px;
+    color: red;
+}
+
+@media screen and (min-width: 501px) {
+    .workout:hover {
+        outline: 2px solid white;
+        transition: 200ms ease-in-out;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .title {
+        font-size: 20px;
+    }
+    .workout {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .workout img {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+    .workout-text {
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0,0,0, 0));
+    }
+
+
+    .workout:hover {
+        .workout-text h1 {
+            font-size: 25px;
+            transition: 200ms ease-in-out;
+        }
+        .workout-text {
+            background: linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0,0,0, 0));
+        }
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .workout-text h1 {
+        font-size: 20px;
+        transition: 200ms ease-in-out;
+    }
+
+    .workout-text p {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+.workout h1 {
+    font-size: 20px;
+}
+}
+
