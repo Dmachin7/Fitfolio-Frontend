@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-workout-page',
   templateUrl: './workout-page.component.html',
   styleUrls: ['./workout-page.component.scss']
 })
-export class WorkoutPageComponent {
+export class WorkoutPageComponent implements OnInit {
+  info:string;
+
   workouts: any[] = [
     {
       "bodyPart": "waist",
@@ -27,4 +31,22 @@ export class WorkoutPageComponent {
       ]
     }
   ]
+
+  constructor (private http: HttpClient, private data: DataService) {
+
+  }
+
+  ngOnInit(): void {
+      this.data.currentMessage.subscribe(info => this.info = info)
+  }
+
+  addWorkout() {
+    this.http.post("https://fit-folio-15bacc8dfac7.herokuapp.com/workouts/", this.workouts, {
+      params: {
+        username: this.info
+      }
+    }).subscribe(res => {
+      console.log(res)
+    })
+  }
 }

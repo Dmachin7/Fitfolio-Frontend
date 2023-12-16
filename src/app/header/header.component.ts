@@ -12,25 +12,16 @@ export class HeaderComponent implements OnInit{
 
   constructor (private http: HttpClient) { }
 
-  lockScroll = () => {
-    if(window.innerWidth < 500) {
-      document.body.classList.toggle('lock-scroll')
-    }
-  }
-  
-  showNav = () => {
-    console.log("it works")
-  }
 
   logout(): void {
-    this.http.post('http://localhost:3000/user/logout', {}, {withCredentials: true})
+    this.http.post('https://fit-folio-15bacc8dfac7.herokuapp.com/user/logout', {}, {withCredentials: true})
     .subscribe(() => {
       this.authenticated = false
     })
   }
 
   ngOnInit() {
-    this.http.get('http://localhost:3000/user/auth', {
+    this.http.get('https://fit-folio-15bacc8dfac7.herokuapp.com/user/auth', {
       withCredentials: true
     }).subscribe(res => {
       Emitters.authEmitter.emit(true)

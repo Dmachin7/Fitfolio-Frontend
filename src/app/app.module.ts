@@ -12,6 +12,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { WorkoutPageComponent } from './workout-page/workout-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MyWorkoutsComponent } from './my-workouts/my-workouts.component';
+import { SearchedWorkoutsComponent } from './searched-workouts/searched-workouts.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MyWorkoutsComponent } from './my-workouts/my-workouts.component';
     LoginPageComponent,
     RegisterPageComponent,
     WorkoutPageComponent,
-    MyWorkoutsComponent
+    MyWorkoutsComponent,
+    SearchedWorkoutsComponent
   ],
   imports: [
     BrowserModule,

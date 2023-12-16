@@ -25,7 +25,7 @@ export class RegisterPageComponent implements OnInit {
 
   submit(): void {
     console.log(this.form.getRawValue())
-    this.http.post('http://localhost:3000/user/register', 
+    this.http.post('https://fit-folio-15bacc8dfac7.herokuapp.com/user/register', 
     this.form.getRawValue()).subscribe( () => 
     this.router.navigate(['/login'])); 
   }
