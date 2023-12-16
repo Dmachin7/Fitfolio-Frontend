@@ -13,4 +13,7 @@
         <h4>Instructions:</h4>
         <p *ngFor="let work of work.instructions">{{work}}</p>
     </div>
+    <div (click)="addWorkout()" class="add">
+        <h1>Add to Plan</h1>
+    </div>
 </div>

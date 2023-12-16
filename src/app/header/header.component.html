@@ -9,7 +9,7 @@
         <ul>
         <li><a *ngIf="authenticated" routerLink="/myworkouts">My Workouts</a></li>
         <li (click)="logout()"><a *ngIf="authenticated">Logout</a></li>
-        <li><a routerLink="/login" *ngIf="!authenticated" (click)="lockScroll()" href="#">Login/Register</a></li>
+        <li><a routerLink="/login" *ngIf="!authenticated" >Login/Register</a></li>
         </ul>
         
     </div>

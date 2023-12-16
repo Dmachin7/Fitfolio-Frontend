@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Emitters } from '../emitters/emmiters';
 
 @Component({
   selector: 'app-my-workouts',
@@ -8,19 +10,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyWorkoutsComponent implements OnInit {
 
+
+  authenticated = false;
+
   workouts:any=[];
 
-  constructor (private http: HttpClient) {
+  info:string;
+
+  constructor (private http: HttpClient, 
+    private data: DataService) {
 
   }
 
   ngOnInit(): void {
-      this.http.get('http://localhost:3000/workouts/').subscribe(
+    this.data.currentMessage.subscribe(info => this.info = info)
+      this.http.get('https://fit-folio-15bacc8dfac7.herokuapp.com/workouts/', { 
+        params: {
+          username: this.info
+        }
+      }).subscribe(
         res => {
           this.workouts = res
         }
       )
+      this.http.get('https://fit-folio-15bacc8dfac7.herokuapp.com/user/auth', {
+        withCredentials: true
+      }).subscribe(res => {
+        Emitters.authEmitter.emit(true)
+      }, 
+      err => {
+        console.log(err)
+        Emitters.authEmitter.emit(false)
+      })
+  
+      Emitters.authEmitter.subscribe((auth: boolean) => {
+        this.authenticated = auth
+      })
+    }
   }
 
 
-}
