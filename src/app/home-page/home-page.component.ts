@@ -18,9 +18,9 @@ workouts:any=[];
 
 
   ngOnInit(){
-    this.http.get('https://exercisedb.p.rapidapi.com/exercises?limit=1', {
+    this.http.get('https://exercisedb.p.rapidapi.com/exercises?limit=10', {
       headers: new HttpHeaders({
-        'X-RapidAPI-Key': environment.apiKey,
+        'X-RapidAPI-Key': '1f65bfcc53mshe628dd3ca1bfac4p1763d3jsn41b07dec96eb',
 		    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
       })
     }).subscribe(result => {

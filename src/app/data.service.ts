@@ -12,12 +12,19 @@ export class DataService {
   private infoSource =  new BehaviorSubject<string>("default message");
   currentMessage = this.infoSource.asObservable();
 
+  private currentWorkoutSource = new BehaviorSubject<string>("default message");
+  currentChosenWorkout = this.currentWorkoutSource.asObservable()
+
   changeInfo(info: string) {
     this.infoSource.next(info)
   }
 
   changeWorkout(workout: object){
     this.workoutSource.next(workout)
+  }
+
+  changeCurrentWorkout(workout: string){
+    this.currentWorkoutSource.next(workout)
   }
 
 }
